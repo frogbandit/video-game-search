@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+<!-- search.html -->
+{% block title %}Welcome | Switch Video Game Search{% endblock %}
+
+{% block body %}
+
+<div class="row">
+  <div class="large-12 columns">
+    <div class="panel">
+       <h1>Switch Video Game Search</h1>
+      <form action="/" method="post">
+          <div class="row">
+            <div class="small-10 columns">
+              <input type="text" placeholder="Search Craigslist video game listings" name="user_search" required/>
+            </div>
+            <div class="small-2 columns">
+              <button class="postfix" type="submit">Search Craigslist video game listings</button>
+            </div>
+          </div>
+        </form>
+      {% block results %}{% endblock %}
+    </div>
+  </div>
+</div>
+{% endblock %}

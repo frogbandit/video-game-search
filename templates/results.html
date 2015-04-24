@@ -1,0 +1,13 @@
+{% extends "search.html" %}
+{% block results %}
+<ul>
+{% for item in api_data %}
+    <li>
+    	{% set title = item[0] %}
+    	{% set summary =  item[1] %}
+    	<h3> {{ title }} </h3>
+    	<h4> {{ summary }} </h4>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}
